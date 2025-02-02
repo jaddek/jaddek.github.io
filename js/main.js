@@ -22,24 +22,24 @@
     }
 
     function scrollTop() {
-        if ($(body).scrollTop() > 150) {
-            $('.lmpixels-scroll-to-top').removeClass('hidden-btn');
+        if ($('body').scrollTop() > 150) {
+            $('.scroll-to-top').removeClass('hidden-btn');
         } else {
-            $('.lmpixels-scroll-to-top').addClass('hidden-btn');
+            $('.scroll-to-top').addClass('hidden-btn');
         }
     }
 
     function skillsStyles() {
-        var custom_styles = "";
+        let custom_styles = "";
         $('.skill-container').each(function () {
-            var value = $(this).attr('data-value');
+            let value = $(this).attr('data-value');
 
             if (value >= 101) {
                 value = '100';
             }
 
             if (typeof value != 'undefined') {
-                var id = $(this).attr('id'),
+                let id = $(this).attr('id'),
                     $custom_style = '#' + id + ' .skill-percentage { width: ' + value + '%; } ';
                 custom_styles += $custom_style;
             }
@@ -61,18 +61,19 @@
 
     // On Document Load
     $(document).ready(function () {
-        var movementStrength = 15;
-        var height = movementStrength / $(document).height();
-        var width = movementStrength / $(document).width();
+        let elements = null;
+        let movementStrength = 15;
+        let height = movementStrength / $(document).height();
+        let width = movementStrength / $(document).width();
         $("body").on('mousemove', function (e) {
-            var pageX = e.pageX - ($(document).width() / 2),
+            let pageX = e.pageX - ($(document).width() / 2),
                 pageY = e.pageY - ($(document).height() / 2),
                 newvalueX = width * pageX * -1,
                 newvalueY = height * pageY * -1;
             if ($('.page-container').hasClass('bg-move-effect')) {
-                var elements = $('.home-photo .hp-inner:not(.without-move), .lm-animated-bg');
+                elements = $('.home-photo .hp-inner:not(.without-move), .lm-animated-bg');
             } else {
-                var elements = $('.home-photo .hp-inner:not(.without-move)');
+                elements = $('.home-photo .hp-inner:not(.without-move)');
             }
             elements.addClass('transition');
             elements.css({
@@ -87,15 +88,15 @@
                 scrollTop();
             });
 
-        $('.lmpixels-scroll-to-top').click(function () {
+        $('.scroll-to-top').click(function () {
             $('body,html').animate({
                 scrollTop: 0
             }, 400);
+
             return false;
         });
 
         scrollTop();
-
         skillsStyles();
     });
 
