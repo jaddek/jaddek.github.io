@@ -1,10 +1,8 @@
 (function ($) {
     "use strict";
-    var body = $('body');
 
-    // Animate layout
     function animateLayout() {
-        var windowWidth = $(window).width(),
+        let windowWidth = $(window).width(),
             animatedContainer = '',
             animateType = $('#page_container').attr('data-animation')
 
@@ -22,7 +20,6 @@
             animatedContainer.removeClass('transform3d');
         }, 1000);
     }
-    // /Animate layout
 
     function scrollTop() {
         if ($(body).scrollTop() > 150) {
@@ -50,10 +47,8 @@
         $('head').append('<style data-styles="leven-theme-skills-css" type="text/css">' + custom_styles + '</style>');
     }
 
-    //On Window load & Resize
     $(window)
-        .on('load', function () { //Load
-            // Animation on Page Loading
+        .on('load', function () {
             $(".preloader").fadeOut(800, "linear");
             animateLayout();
         })
@@ -92,16 +87,12 @@
                 scrollTop();
             });
 
-
-
-
         $('.lmpixels-scroll-to-top').click(function () {
             $('body,html').animate({
                 scrollTop: 0
             }, 400);
             return false;
         });
-
 
         scrollTop();
 
