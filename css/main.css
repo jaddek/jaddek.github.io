@@ -84,6 +84,12 @@ body {
   z-index: -1;
 }
 
+@media only screen and (max-width: 991px) {
+  .lm-animated-bg {
+    display: none;
+  }
+}
+
 /* /Body Animated Background */
 
 .page-scroll {
