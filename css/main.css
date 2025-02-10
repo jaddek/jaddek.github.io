@@ -5971,6 +5971,7 @@ a.post-thumbnail:hover {
 }
 
 .origin-border {
-    border: 0px #0277BD solid;
+    cursor: pointer;
+    border: 0 #0277BD solid;
     box-shadow: 0 0 3px #0277BD;
 }
