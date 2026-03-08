@@ -11,7 +11,8 @@ Specialties: Scalable Backend Architecture, SaaS, API Design, and System Reliabi
 
 ## 🏢 Domain Experience
 I’ve built and scaled platforms across:
-— Fintech & Banking: Secure SaaS solutions and financial services.
-— Media & Social: High-traffic video platforms and social marketplaces.
-— Enterprise: Retail, Security, and B2B business services.
-— Looking for a seasoned engineer who can pick the right tool for the job? Let’s connect.
+
+- Fintech & Banking: Secure SaaS solutions and financial services.
+- Media & Social: High-traffic video platforms and social marketplaces.
+- Enterprise: Retail, Security, and B2B business services.
+- Looking for a seasoned engineer who can pick the right tool for the job? Let’s connect.
