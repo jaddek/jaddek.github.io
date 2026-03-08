@@ -1,4 +1,3 @@
 User-agent: *
-Disallow: /vcard/
 
-Sitemap: https://tonynazarov.com/sitemap.xml
+Sitemap: https://jaddek.github.com/sitemap.xml
